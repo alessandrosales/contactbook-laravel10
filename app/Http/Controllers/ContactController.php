@@ -44,7 +44,7 @@ class ContactController extends Controller
     public function update(Request $request, string $id)
     {
         $contact = $this->show($id);
-        $contact->fill($request->all());
+        $contact->update($request->all());
         return $contact;
     }
 
